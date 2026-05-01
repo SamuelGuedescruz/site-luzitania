@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Homenagem à Professora Luzitânia</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#0a192f;
+  color:white;
+  overflow:hidden;
+}
+
+.pagina{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.ativa{
+  opacity:1;
+  transform:translateY(0);
+  z-index:10;
+}
+
+h1{
+  font-size:2.3rem;
+  margin-bottom:20px;
+  text-shadow:0 0 10px rgba(255,255,255,0.2);
+}
+
+p{
+  max-width:800px;
+  line-height:1.7;
+  font-size:1.1rem;
+  margin:12px 0;
+  color:#f8fafc;
+}
+
+button{
+  margin-top:25px;
+  padding:14px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#0a192f;
+  cursor:pointer;
+  transition:.4s;
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+.logo{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid white;
+  margin:20px 0;
+}
+
+.foto-prof{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid white;
+  margin:20px 0;
+}
+
+/* GALERIA ORIGINAL (2 FOTOS) */
+.galeria{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  margin-top:25px;
+}
+
+.galeria img{
+  width:240px;
+  border-radius:20px;
+}
+
+/* NOVA GALERIA (6 FOTOS) */
+.galeria6{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:15px;
+  margin-top:25px;
+}
+
+.galeria6 img{
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.galeria6 img:hover{
+  transform:scale(1.08);
+}
+
+.nome{
+  font-size:3rem;
+  margin:10px 0;
+}
+
+code{
+  display:block;
+  margin:10px;
+  background:rgba(255,255,255,0.08);
+  padding:12px;
+  border-radius:12px;
+}
+
+.coracao{
+  position:absolute;
+  color:white;
+  animation:subir 5s linear infinite;
+}
+
+@keyframes subir{
+  from{transform:translateY(100vh); opacity:1;}
+  to{transform:translateY(-100px); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAG 1 -->
+<div class="pagina ativa" id="p1">
+<h1>Conheça nosso curso</h1>
+<p>2° Desenvolvimento de Sistemas</p>
+<img src="f8cc0552-e5b8-48d5-b373-1cb08c21ff21.jpg" class="logo">
+<button onclick="ir(2)">Clique aqui</button>
+</div>
+
+<!-- NOVA PAGINA -->
+<div class="pagina" id="p2">
+<h1>Começando pelos nossos protagonistas 😂</h1>
+
+<div class="galeria6">
+<img src="f63b2acb-7199-46bd-9bd2-063fdbaac670.jpg">
+<img src="41ac7e93-0782-4d45-bbc7-be45bcc0caf6.jpg">
+<img src="e4c5a26f-f59f-4153-a9d9-5626aa31fb22.jpg">
+<img src="261dac75-c4b9-4dd2-8e30-070eb751eefd.jpg">
+<img src="ad4ff911-c5a1-49a6-b3ee-4fc65ebf4e95.jpg">
+<img src="2001d01f-f18e-4b3e-b05e-e3c700612a44.jpg">
+</div>
+
+<p>Ops… esses não 🤣 rsrsrs...</p>
+
+<button onclick="ir(3)">Clique aqui para ver a verdadeira protagonista</button>
+</div>
+
+<!-- ANTIGA PAG 2 (AGORA 3) -->
+<div class="pagina" id="p3">
+<h1>O começo</h1>
+<p>No dia 03/02/2025 iniciamos nossa jornada no ensino médio técnico, no curso de Desenvolvimento de Sistemas, e foi ali que conhecemos a professora Luzitânia. Desde o começo, ela se mostrou muito mais do que uma professora, sempre paciente, dedicada e disposta a ajudar em cada dificuldade. Entre códigos, erros e aprendizados, foi com ela que evoluímos não só como alunos, mas também como pessoas.</p>
+<p>Foi lá que conhecemos alguém especial.</p>
+<button onclick="ir(4)">Continuar</button>
+</div>
+
+<!-- ANTIGA PAG 3 (AGORA 4) -->
+<div class="pagina" id="p4">
+<h1>Sim... ela</h1>
+
+<div class="nome">Luzitânia</div>
+
+<img src="d4d0218e-ade1-454a-895a-f4d2453c99ee.jpg" class="foto-prof">
+
+<p>
+Uma professora que não ensinou só conteúdo,
+mas também valores, paciência e persistência.
+</p>
+
+<button onclick="ir(5)">Continuar</button>
+</div>
+
+<!-- ANTIGA PAG 4 (AGORA 5) -->
+<div class="pagina" id="p5">
+<h1>O que aprendemos</h1>
+
+<code> python=print("Tia luzitania")</code>
+<code> java=System.out.println("A melhor profa");</code>
+<code> Pseudocodigo=Escreva("Do Dionisio💕");</code>
+
+<button onclick="ir(6)">Continuar</button>
+</div>
+
+<!-- ANTIGA PAG 5 (AGORA 6) -->
+<div class="pagina" id="p6">
+<h1>Gratidão</h1>
+
+<p>
+Obrigado por ensinar além da sala,
+por aconselhar e acreditar na gente.
+</p>
+
+<p>🤍 🤍 🤍</p>
+
+<button onclick="ir(7)">Final</button>
+</div>
+
+<!-- ANTIGA PAG 6 (AGORA 7) -->
+<div class="pagina" id="p7">
+<h1>Feliz Aniversario Tia LuLu🎂🎊</h1>
+
+<div class="galeria">
+<img src="1409ab66-e062-41af-851a-e7b8e5ef576e.jpg">
+<img src="76f3d04b-4dd0-4fcc-b188-17acfba06959.jpg">
+</div>
+
+<p>Com carinho, sua turma 🤍</p>
+</div>
+
+<script>
+function ir(n){
+document.querySelectorAll('.pagina').forEach(p=>{
+p.classList.remove('ativa');
+});
+document.getElementById('p'+n).classList.add('ativa');
+}
+
+setInterval(()=>{
+let c=document.createElement("div");
+c.className="coracao";
+c.innerHTML="♡";
+c.style.left=Math.random()*100+"%";
+document.body.appendChild(c);
+setTimeout(()=>c.remove(),5000);
+},700);
+</script>
+
+</body>
+</html>
